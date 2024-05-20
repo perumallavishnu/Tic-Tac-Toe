@@ -1,0 +1,107 @@
+@font-face {
+    font-family: myfont;
+    src: url(Valorax-lg25V.otf);
+}
+*{
+    margin: 0;
+    text-align: center;
+}
+body {
+    background-color: #282e62;
+}
+
+.status{
+    margin-top: 130px;
+}
+.cell {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+    cursor: pointer;
+    background-color: transparent; 
+    border: 15px solid #191d41;
+}
+
+#gameContainer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+#cellContainer {
+    margin-left: 30%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 600px;
+    height: 600px;
+    gap: 5px;
+}
+
+h1 {
+    font-family: myfont;
+    margin-top: 10px;
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #000e8f, 0 0 20px #000e8f, 0 0 25px #000e8f, 0 0 30px #000e8f, 0 0 35px #000e8f;
+}
+
+#statusText {
+    font-family: myfont;
+    font-size: 3em;
+    margin-top: 20px;
+}
+
+#restartBtn {
+    font-family: myfont;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 2em;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: relative;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px 0 #ff0000; /* Initial shadow */
+    }
+    100% {
+        box-shadow: 0 0 20px 10px #27b7ff; /* Larger shadow */
+    }
+}
+
+.x-player {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000, 0 0 30px #ff0000, 0 0 35px #ff0000;
+}
+
+.o-player {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #4ca5ff, 0 0 20px #4ca5ff, 0 0 25px #4ca5ff, 0 0 30px #4ca5ff, 0 0 35px #4ca5ff;
+}
+
+.strikeout {
+    position: relative;
+}
+
+.strikeout::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff; /* Change the color according to your design */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
